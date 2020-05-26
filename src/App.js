@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 import './App.css';
+import Assessment from './components/Pages/Profile/Assessment';
+import Profiles from './components/Pages/Profile/profile'
 
 const App = () => {
 
@@ -8,12 +10,14 @@ const App = () => {
   }, [])
 
   return (
-    <div>
+    
       <h1>
-        COLLEDGE OF EDUCATION, OJU
+       
+        <Profiles/>
+        <Assessment/>
       </h1>
-    </div>
-  )
+    
+      )
 }
 
 export default App

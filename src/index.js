@@ -4,18 +4,18 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/main.scss';
 import * as serviceWorker from './serviceWorker';
-import Firebase, { FirebaseContext } from './components/Firebase'; // comment out this line, line 15 and line 17 if you haven't set the .env environment
-import { ThemeProvider } from '@material-ui/core/styles';
+//import Firebase, { FirebaseContext } from './components/Firebase'; // comment out this line, line 15 and line 17 if you haven't set the .env environment
+
 import theme from './assets/color';
 
 
 ReactDOM.render(
-    <ThemeProvider theme={theme} >
+    <div >
         {console.log('customTheme: ', theme)}
-        <FirebaseContext.Provider value={new Firebase()}>
+        
             <App />
-        </FirebaseContext.Provider>
-    </ThemeProvider>
+      
+    </div>
     ,
     document.getElementById('root')
 );
