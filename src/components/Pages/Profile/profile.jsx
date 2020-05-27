@@ -5,13 +5,24 @@ import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Image from "./edu.jpg";
-import { CardContent } from '@material-ui/core';
 
 const useStyles = makeStyles(theme=>({
     img: {
-        width: '100%',
-        height: '100%',
+        
         objectfit: "cover",
+        position: "absolute",
+        margin: "auto",
+        top: 70,
+        right: 0,
+        left: 0,
+        width: 250,
+        height: 250,
+        borderradius: '50%',
+        shadowOffset:{  width: 10,  height: 10,  },
+    shadowColor: 'black',
+    shadowOpacity: 1.0,
+        overflow: "hidden",
+        animation: 'mvTop 1.5s'
       },
     container: {
         [theme.breakpoints.up('sm')]: {
@@ -28,64 +39,37 @@ const useStyles = makeStyles(theme=>({
             marginTop: 150
         },
     },
-    profile: {
+   
+    
+    name:{
+        color: '#202020',
+        fontSize: 24,
+        fontWeight: 600,
+        textAlign: 'center',
+    },
+    bigAvatar: {
+        margin: 10,
+        width: 200,
+        height: 200,
+        border: '3px solid rgba(232, 232, 232, 0.8)',
+        boxShadow: '1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset',
         
     },
-    profilePhoto: {
-        maxWidth: '50%'
-    },
-    profileInfo: {
-        color: '#3d4451',
-        paddingBottom: 25,
-        marginBottom: 25,
-        borderBottom: '1px solid #dedede',
-        [theme.breakpoints.down('md')]: {
-            borderBottom: '0px'
-        },
-    },
-    avatarholder: {
-        position: "absolute",
-        margin: "auto",
-        top: 40,
-        right: 0,
-        left: 0,
-        width: 100,
-        height: 100,
-        borderradius: '50%',
-        shadowOffset:{  width: 10,  height: 10,  },
-    shadowColor: 'black',
-    shadowOpacity: 1.0,
-        overflow: "hidden",
-        animation: 'mvTop 1.5s'
-    },
-    greeting: {
-        color: '#fff',
-        fontSize: 14,
-        fontWeight: 700,
-        lineHeight: 1.1,
-        display: 'inline-block',
-        padding: '7px 12px',
-        textTransform: 'uppercase',
-        position: 'relative',
-        backgroundColor: theme.palette.primary[ 500 ],
-        
-        '&:before': {
-            content: '""',
-            width: 0,
-            height: 0,
-            top: '100%',
-            left: 5,
-            display: 'block',
-            position: 'absolute',
-            borderStyle: 'solid',
-            borderWidth: '0 0 8px 8px',
-            borderColor: 'transparent',
-            borderLeftColor: theme.palette.primary[ 500 ],
-        }
-    },
     
     
     
+  position: {
+        textAlign: 'center',
+        marginTop: 5,
+        color:  '#202020',
+        fontStyle: 'italic'
+    }  ,
+    
+    introduction: {
+        color:  '#202020',
+        margin: '15px 70px',
+        textAlign: 'center',
+    }
 }));
 
 
@@ -94,42 +78,24 @@ export default function Profiles () {
         const classes = useStyles();
         return (
             <Paper className={classes.container} >
-                <Grid item
-                      container
-                      direction="column"
-                      spacing={0}>
-                    <Grid item
-                          className={classes.profile}
-                          container
-                          spacing={0}
-                    >
-                        <Grid item
-                              lg={5}
-                              xs={12}
-                        >
-                    <Avatar className={classes.avatarholder}>
-            <img className={classes.img} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950" alt="Albert Einstein"/>
-            </Avatar>
+                <Grid container className={classes.container} justify="center" alignItems="center">                    
+                     <Grid>
+                    <Avatar  className={classes.bigAvatar}  alt="Albert Einstein" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950"/>
                         </Grid>
-                                               
-                            <CardContent item
-                                  className={classes.profileInfo}
-                            >
-                                <div>"Hello"</div>
-                                < Typography align="center" textAlign="center">
-                                    <span align="center" textAlign="center">I'm</span> Aduni Aderoungbe
-                                </ Typography>
-                                <h2 align="center" textAlign="center">Computer Scientist</h2>
-                            </CardContent>
-                            
-                        
+
+                        <Grid item xs={12}>
+                        <Typography variant="h3" className={classes.name}>
+                        {'Aduni Aderoungbe'}
+                        </Typography>
+                        <Typography variant="h5" className={classes.position}>
+                        {'Department of Computer Science'}
+                        </Typography>
+                        <Typography variant="h6" className={classes.introduction}>
+                        {'Faculty of Science'}
+                        </Typography>
                     </Grid>
-                    <Grid
-                        className={classes.profileSocial}
-                        
-                    >
-                        
-                    </Grid>
+                     
+                    
                     
                 </Grid>
                 
