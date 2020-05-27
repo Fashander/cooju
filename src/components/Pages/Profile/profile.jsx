@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import Image from "./edu.jpg";
+import { CardContent } from '@material-ui/core';
 
 const useStyles = makeStyles(theme=>({
     img: {
@@ -16,24 +18,18 @@ const useStyles = makeStyles(theme=>({
             marginTop: 20,
             background: '#202020',
             height: 400,
-            
+            backgroundImage: `url(${Image})`,
+            backgroundSize: "cover",
+            backgroundPosition:"center",
+            backgroundRepeat:"no -repeat",
+
         },
         [theme.breakpoints.down('md')]: {
             marginTop: 150
         },
     },
     profile: {
-        padding: '57px 50px 15px 50px',
-        [theme.breakpoints.down('lg')]: {
-            padding: '50px 40px 15px 40px',
-        },
-        [theme.breakpoints.down('md')]: {
-            padding: '30px 20px 15px 20px'
-        },
-        [theme.breakpoints.down('sm')]: {
-            padding: '30px 20px 15px 20px'
-        },
-        marginBottom: 10
+        
     },
     profilePhoto: {
         maxWidth: '50%'
@@ -87,31 +83,8 @@ const useStyles = makeStyles(theme=>({
             borderLeftColor: theme.palette.primary[ 500 ],
         }
     },
-    profileTitle: {
-        fontSize: 32,
-        lineHeight: 1.1,
-        fontWeight: 700,
-        marginBottom: 5,
-        justifyContent:'center',
-        [theme.breakpoints.down('md')]: {
-            fontSize: 20
-        },
-    },
-    profileTitleStart: {
-        fontWeight: 200,
-    },
-    profilePosition: {
-        fontSize: 18,
-        [theme.breakpoints.down('md')]: {
-            fontSize: 16
-        },
-        fontWeight: 400,
-        lineHeight: 1.1,
-        marginBottom: 0,
-    },
-    profileSocial: {
-        backgroundColor: theme.palette.primary[ 500 ],
-    }
+    
+    
     
 }));
 
@@ -138,27 +111,18 @@ export default function Profiles () {
             <img className={classes.img} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950" alt="Albert Einstein"/>
             </Avatar>
                         </Grid>
-                        <Grid item
-                              xs={1}
-                        />
-                        <Grid item
-                              lg={6}
-                              xs={12}
-                              container
-                              spacing={0}
-                              align="flex-start"
-                              direction="column">
-                            <Grid item
+                                               
+                            <CardContent item
                                   className={classes.profileInfo}
                             >
                                 <div>"Hello"</div>
-                                < Typography className={classes.profileTitle}>
-                                    <span className={classes.profileTitleStart}>I'm</span> Aduni Aderoungbe
+                                < Typography align="center" textAlign="center">
+                                    <span align="center" textAlign="center">I'm</span> Aduni Aderoungbe
                                 </ Typography>
-                                <h2 className={classes.profilePosition}>Computer Scientist</h2>
-                            </Grid>
+                                <h2 align="center" textAlign="center">Computer Scientist</h2>
+                            </CardContent>
                             
-                        </Grid>
+                        
                     </Grid>
                     <Grid
                         className={classes.profileSocial}

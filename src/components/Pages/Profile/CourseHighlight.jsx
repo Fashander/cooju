@@ -1,10 +1,9 @@
 import React from 'react';
-import { makeStyles,withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography  from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent'
 import Paper from '@material-ui/core/Paper'
 import { CardHeader } from '@material-ui/core';
-import LinearProgress from '@material-ui/core/LinearProgress'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,60 +51,44 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     lineHeight: 1.1,
     textAlign:'center'
-  },
+  }
+  
 }));
-const BorderLinearProgress = withStyles((theme) => ({
-  root: {
-    marginTop:15,
-    height: 10,
-    borderRadius: 5,
-  },
-  colorPrimary: {
-    backgroundColor: theme.palette.grey[theme.palette.type === 'dark' ? 700 : 200],
-  },
-  bar: {
-    borderRadius: 5,
-    backgroundColor: '#1a90ff',
-  },
-}))(LinearProgress);
 
-export default function Inprogress() {
+export default function CourseHighlight() {
   const classes = useStyles();
 
   return (
     
     <div>
      
-    <CardHeader className={classes.Courseheader} title={'Completed'}>
+    <CardHeader className={classes.Courseheader} title={'Course Highlights'}>
     </CardHeader>
     <div className={classes.root}>
       <Paper className={classes.container} elevation={3} >
           <CardContent>
-          <Typography className={classes.header}> {'Mathematical Methods (MAT 103)'}</Typography>
-          <BorderLinearProgress variant="determinate" value={100}  spacing={10}/>
-          
+          <Typography className={classes.header}> {'Computer Science'}</Typography>
+      <span className={classes.header2}  >{'43 Courses'}</span>
           </CardContent>
      
       </Paper>
       
       <Paper elevation ={3}>
       <CardContent>
-          <Typography className={classes.header}> {'Introduction to Electronics (ELE 101)'}</Typography>
-          <BorderLinearProgress variant="determinate" value={100}  spacing={10}/>
-          
+          <Typography className={classes.header}> {'Business Administration'}</Typography>
+      <span className={classes.header2}  >{'25 Courses'}</span>
           </CardContent>
       </Paper>
       <Paper elevation={3}>
       <CardContent>
-          <Typography className={classes.header}> {'Introduction to Chemistry (CHM 103)'}</Typography>
-          <BorderLinearProgress variant="determinate" value={100}  spacing={10}/>
-          
+          <Typography className={classes.header}> {'Architecture'}</Typography>
+      <span className={classes.header2}  >{'53 Courses'}</span>
           </CardContent>
       </Paper>
       <Paper elevation={3} >
       <CardContent>
-          <Typography className={classes.header}> {'Introduction to Physics (PHY 101)'}</Typography>
-          <BorderLinearProgress variant="determinate" value={100}  spacing={10}/>
+          <Typography className={classes.header}> {'MBBS'}</Typography>
+      <span className={classes.header2}  >{'80 Courses'}</span>
           </CardContent>
       </Paper>
     </div>

@@ -27,5 +27,6 @@ export default function Assessment() {
       <BottomNavigationAction label="Completed" value="nearby" icon={<Check />} />
       
     </BottomNavigation>
-  );
+    
+    );
 }
