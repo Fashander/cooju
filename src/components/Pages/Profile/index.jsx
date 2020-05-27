@@ -6,18 +6,16 @@ import CourseHighlight from './CourseHighlight';
 import Reports from './Reports'
 import Inprogress from './Inprogress'
 import Completed from './Completed'
-const index = () => {
-    return (
-        <div>
-        
-            <Profile />
-            <Assessment />
-           <Reports/>
-                <CourseHighlight/>
-            <Inprogress/>
-            <Completed/>
-            
-        </div>
-    )
-}
+
+const index = () => (
+    <div>
+        <Profile />
+        <Assessment />
+        <Reports/>
+        <CourseHighlight/>
+        <Inprogress/>
+        <Completed/>
+    </div>
+)
+
 export default index

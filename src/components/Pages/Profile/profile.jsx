@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme=>({
         height: 250,
         borderradius: '50%',
         shadowOffset:{  width: 10,  height: 10,  },
-    shadowColor: 'black',
-    shadowOpacity: 1.0,
+        shadowColor: 'black',
+        shadowOpacity: 1.0,
         overflow: "hidden",
         animation: 'mvTop 1.5s'
       },
@@ -33,38 +33,30 @@ const useStyles = makeStyles(theme=>({
             backgroundSize: "cover",
             backgroundPosition:"center",
             backgroundRepeat:"no -repeat",
-
         },
         [theme.breakpoints.down('md')]: {
             marginTop: 150
         },
-    },
-   
-    
+            },
     name:{
         color: '#202020',
         fontSize: 24,
         fontWeight: 600,
         textAlign: 'center',
-    },
+        },
     bigAvatar: {
         margin: 10,
         width: 200,
         height: 200,
         border: '3px solid rgba(232, 232, 232, 0.8)',
         boxShadow: '1px 1px 4px 0px rgba(0, 0, 0, 0.75) inset',
-        
-    },
-    
-    
-    
-  position: {
+        },
+    position: {
         textAlign: 'center',
         marginTop: 5,
         color:  '#202020',
         fontStyle: 'italic'
-    }  ,
-    
+        },
     introduction: {
         color:  '#202020',
         margin: '15px 70px',
@@ -80,26 +72,21 @@ export default function Profiles () {
             <Paper className={classes.container} >
                 <Grid container className={classes.container} justify="center" alignItems="center">                    
                      <Grid>
-                    <Avatar  className={classes.bigAvatar}  alt="Albert Einstein" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950"/>
-                        </Grid>
-
-                        <Grid item xs={12}>
+                        <Avatar  className={classes.bigAvatar}  alt="Albert Einstein" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950"/>
+                    </Grid>
+                    <Grid item xs={12}>
                         <Typography variant="h3" className={classes.name}>
-                        {'Aduni Aderoungbe'}
+                            {'Aduni Aderoungbe'}
                         </Typography>
                         <Typography variant="h5" className={classes.position}>
-                        {'Department of Computer Science'}
+                            {'Department of Computer Science'}
                         </Typography>
                         <Typography variant="h6" className={classes.introduction}>
-                        {'Faculty of Science'}
+                            {'Faculty of Science'}
                         </Typography>
                     </Grid>
-                     
-                    
-                    
-                </Grid>
-                
-            </Paper>
-        )
-    }
+                 </Grid>
+        </Paper>
+    )
+}
 

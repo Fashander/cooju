@@ -28,8 +28,6 @@ export default function Assessment() {
       <BottomNavigationAction component={Link} to="/CourseHighlight" label="Home" value="/CourseHighlight" icon={<HomeIcon />} />
       <BottomNavigationAction component={Link} to="/InProgress" label="In Progress" value="/Inprogress" icon={<RoundedCorner />} />
       <BottomNavigationAction label="Completed" value="nearby" icon={<Check />} />
-      
     </BottomNavigation>
-    
-    );
+  );
 }
