@@ -173,7 +173,7 @@ export default function MainAppBar(props) {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static">
+            <AppBar position="fixed" >
                 <Toolbar>
                     {/* <IconButton
                         edge="start"
@@ -183,7 +183,7 @@ export default function MainAppBar(props) {
                     >
                         <MoreIcon />
                     </IconButton> */}
-                    <Typography component={Link} to={ROUTES.LANDING} className={classes.title} variant="p" noWrap >
+                    <Typography component={Link} to={ROUTES.LANDING} className={classes.title} variant="inherit" noWrap >
                         <img src={CoojuLogo} alt='CoojuLogo' className={classes.logo} />
                     </Typography>
                     <div className={classes.search}>
