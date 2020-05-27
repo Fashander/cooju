@@ -1,9 +1,13 @@
 import React from 'react';
+import BillBoard from './BillBoard';
+import { Typography } from '@material-ui/core';
+import QuickLinks from './QuickLinks';
 
 const Landing = () => {
     return (
         <div>
-            WELCOME TO THE LANDING PAGE
+            <BillBoard />
+            <QuickLinks />
         </div>
     )
 }
