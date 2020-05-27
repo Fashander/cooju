@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
+import Landing from './components/Pages/Landing'
 
 const App = () => {
 
@@ -9,9 +10,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>
-        COLLEDGE OF EDUCATION, OJU
-      </h1>
+      <Landing />
     </div>
   )
 }

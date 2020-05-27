@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Header from '../../UI/Header/Header';
+import NewHeader from '../../UI/Header/NewHeader'
 
-const index = () => {
+const Landing = () => {
     return (
         <div>
-            
+            <NewHeader />
+            {/* <Header /> */}
         </div>
     )
 }
 
-export default index
+export default Landing
