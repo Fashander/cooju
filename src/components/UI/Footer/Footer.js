@@ -59,10 +59,10 @@ const footer = () => {
             </div>
             <div className='footer-content'>
               <p className='text-muted'>
-                <small>Address : 146, Oyemekun road, Akure, Ondo, Nigeria. </small>
+                <small>Address : address of address located at address </small>
               </p>
               <p className='text-muted'>
-                <small>Phone : +234 813 727 9837</small>
+                <small>Phone : +234 803 667 6535</small>
               </p>
               <p className='text-muted'>
                 <small>E-mail : info@weixeltech.com</small>
