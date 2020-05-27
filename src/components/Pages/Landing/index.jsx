@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '../../UI/Header/Header';
-import NewHeader from '../../UI/Header/NewHeader'
 
 const Landing = () => {
     return (
         <div>
-            <NewHeader />
-            {/* <Header /> */}
+            WELCOME TO THE LANDING PAGE
         </div>
     )
 }

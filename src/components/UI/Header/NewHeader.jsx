@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import * as ROUTES from '../../../constants/routes'
+import { Link } from 'react-router-dom';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -69,13 +71,13 @@ const useStyles = makeStyles((theme) => ({
     },
     sectionDesktop: {
         display: 'none',
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('sm')]: {
             display: 'flex',
         },
     },
     sectionMobile: {
         display: 'flex',
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('sm')]: {
             display: 'none',
         },
     },
@@ -84,13 +86,16 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function PrimarySearchAppBar(props) {
+export default function MainAppBar(props) {
+    // master 397da25
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    // console.log('mobileAnchor: ', mobileMoreAnchorEl, 'anchorEl: ', anchorEl);
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -120,7 +125,7 @@ export default function PrimarySearchAppBar(props) {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+            <MenuItem component={Link} to={ROUTES.PROFILE} onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
     );
@@ -178,8 +183,8 @@ export default function PrimarySearchAppBar(props) {
                     >
                         <MoreIcon />
                     </IconButton> */}
-                    <Typography className={classes.title} variant="p" noWrap >
-                        <a href="/"><img src={CoojuLogo} alt='CoojuLogo' className={classes.logo} /></a>
+                    <Typography component={Link} to={ROUTES.LANDING} className={classes.title} variant="p" noWrap >
+                        <img src={CoojuLogo} alt='CoojuLogo' className={classes.logo} />
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
