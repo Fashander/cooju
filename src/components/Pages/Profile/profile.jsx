@@ -22,14 +22,10 @@ const useStyles = makeStyles(theme=>({
             backgroundSize: "cover",
             backgroundPosition:"center",
             backgroundRepeat:"no -repeat",
-
         },
         [theme.breakpoints.down('md')]: {
             marginTop: 150
         },
-    },
-    profile: {
-        
     },
     profilePhoto: {
         maxWidth: '50%'
@@ -83,57 +79,33 @@ const useStyles = makeStyles(theme=>({
             borderLeftColor: theme.palette.primary[ 500 ],
         }
     },
-    
-    
-    
 }));
 
 
 export default function Profiles () {
-    
-        const classes = useStyles();
-        return (
-            <Paper className={classes.container} >
-                <Grid item
-                      container
-                      direction="column"
-                      spacing={0}>
-                    <Grid item
-                          className={classes.profile}
-                          container
-                          spacing={0}
-                    >
-                        <Grid item
-                              lg={5}
-                              xs={12}
-                        >
-                    <Avatar className={classes.avatarholder}>
-            <img className={classes.img} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950" alt="Albert Einstein"/>
-            </Avatar>
-                        </Grid>
-                                               
-                            <CardContent item
-                                  className={classes.profileInfo}
-                            >
-                                <div>"Hello"</div>
-                                < Typography align="center" textAlign="center">
-                                    <span align="center" textAlign="center">I'm</span> Aduni Aderoungbe
-                                </ Typography>
-                                <h2 align="center" textAlign="center">Computer Scientist</h2>
-                            </CardContent>
-                            
-                        
+    const classes = useStyles();
+    return (
+        <Paper className={classes.container} >
+            <Grid item container direction="column" spacing={0} >
+                <Grid item className={classes.profile} container spacing={0} >
+                    <Grid item lg={5} xs={12} >
+                        <Avatar className={classes.avatarholder}>
+                            <img className={classes.img} src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950" alt="Albert Einstein"/>
+                        </Avatar>
                     </Grid>
-                    <Grid
-                        className={classes.profileSocial}
-                        
-                    >
-                        
-                    </Grid>
-                    
+                    <CardContent item className={classes.profileInfo} >
+                        <div>"Hello"</div>
+                        <Typography align="center" textAlign="center">
+                            <span align="center" textAlign="center">I'm</span> Aduni Aderoungbe
+                        </Typography >
+                        <h2 align="center" textAlign="center">Computer Scientist</h2>
+                    </CardContent>
                 </Grid>
-                
-            </Paper>
-        )
-    }
+                <Grid className={classes.profileSocial} >
+
+                </Grid>
+            </Grid>
+        </Paper>
+    )
+}
 

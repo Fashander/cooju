@@ -25,8 +25,6 @@ export default function Assessment() {
       <BottomNavigationAction label="Home" value="recents" icon={<HomeIcon />} />
       <BottomNavigationAction label="In Progress" value="favorites" icon={<RoundedCorner />} />
       <BottomNavigationAction label="Completed" value="nearby" icon={<Check />} />
-      
     </BottomNavigation>
-    
-    );
+  );
 }
