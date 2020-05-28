@@ -40,12 +40,12 @@ const useStyles = makeStyles(theme=>({
             },
     name:{
         color: '#202020',
-        fontSize: 24,
+        fontSize: 28,
         fontWeight: 600,
         textAlign: 'center',
         },
     bigAvatar: {
-        margin: 10,
+        margin: 50,
         width: 200,
         height: 200,
         border: '3px solid rgba(232, 232, 232, 0.8)',
@@ -55,12 +55,12 @@ const useStyles = makeStyles(theme=>({
         textAlign: 'center',
         marginTop: 5,
         color:  '#202020',
-        fontStyle: 'italic'
+        fontSize:20,
         },
     introduction: {
         color:  '#202020',
-        margin: '15px 70px',
         textAlign: 'center',
+        fontSize:16,
     }
 }));
 
@@ -71,7 +71,7 @@ export default function Profiles () {
         return (
             <Paper className={classes.container} >
                 <Grid container className={classes.container} justify="center" alignItems="center">                    
-                     <Grid>
+                    <Grid>
                         <Avatar  className={classes.bigAvatar}  alt="Albert Einstein" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950"/>
                     </Grid>
                     <Grid item xs={12}>

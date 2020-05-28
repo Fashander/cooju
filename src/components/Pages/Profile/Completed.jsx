@@ -9,12 +9,11 @@ import LinearProgress from '@material-ui/core/LinearProgress'
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 'calc(100% - 40px)',
-    justifyContent:"center",
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(25),
+      width: theme.spacing(35),
       height: theme.spacing(10),
     },
     
@@ -51,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#414141',
     fontSize: 24,
     lineHeight: 1.1,
-    textAlign:'center'
+    textAlign:'left'
   },
 }));
 const BorderLinearProgress = withStyles((theme) => ({

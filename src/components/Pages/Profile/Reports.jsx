@@ -14,10 +14,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(61),
-      height: theme.spacing(20),
+      width: theme.spacing(35),
+      height: theme.spacing(40),
     },
-    
     
     container: {
         alignItems: 'stretch',
@@ -25,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             justifyItems: 'space-evenly',
         },
+        align:'center',
     }
-    
+
   },
   header:{
     color: '#414141',
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: 1.5,
         textAlign: 'left',
         marginBottom: 8,
-        marginTop: 8
+        marginTop: 75
         
   },
   header2:{
@@ -53,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#414141',
     fontSize: 24,
     lineHeight: 1.1,
-    textAlign:'center'
+    textAlign:'left',
+    marginLeft: 32,
   }
   
 }));
@@ -72,13 +73,12 @@ export default function Reports() {
           <Typography className={classes.header}> {'Application for 2020/2021'}</Typography>
       <span className={classes.header2}  >{'Earn a degree by studying at College of Education, OJu.'}</span>
           </CardContent>
-     
       </Card>
       
       <Paper elevation ={3}>
       <CardContent>
-          <Typography className={classes.header}> {'Business Administration'}</Typography>
-      <span className={classes.header2}  >{'25 Courses'}</span>
+          <Typography className={classes.header}> {'E-learning Portal'}</Typography>
+      <span className={classes.header2}  >{'COOJU begins E-learning and Distance education'}</span>
           </CardContent>
       </Paper>     
     </div>
